@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🫧 BUBBLES -->
+<div class="bubbles">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span>
+</div>
+
+<h1>Memory Game 🧠</h1>
+
+<div class="controls">
+  <select id="difficulty">
+    <option value="8">Easy</option>
+    <option value="12">Medium</option>
+    <option value="16">Hard</option>
+  </select>
+  <button onclick="restartGame()">Restart 🔁</button>
+</div>
+
+<div class="info">
+  <p>Moves: <span id="moves">0</span></p>
+  <p>Time: <span id="time">0</span>s</p>
+  <p>Best: <span id="best">--</span></p>
+</div>
+
+<div class="game-board" id="board"></div>
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2>You Won! 🏆</h2>
+    <p id="finalStats"></p>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

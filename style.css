@@ -1,0 +1,142 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: white;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🫧 BUBBLES */
+.bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bubbles span {
+  position: absolute;
+  bottom: -100px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  animation: rise 15s linear infinite;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 0.4; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+.bubbles span:nth-child(1){ left:10%; animation-duration:12s;}
+.bubbles span:nth-child(2){ left:20%; animation-duration:18s;}
+.bubbles span:nth-child(3){ left:30%; animation-duration:10s;}
+.bubbles span:nth-child(4){ left:40%; animation-duration:20s;}
+.bubbles span:nth-child(5){ left:50%; animation-duration:14s;}
+.bubbles span:nth-child(6){ left:60%; animation-duration:16s;}
+.bubbles span:nth-child(7){ left:70%; animation-duration:11s;}
+.bubbles span:nth-child(8){ left:80%; animation-duration:17s;}
+.bubbles span:nth-child(9){ left:90%; animation-duration:13s;}
+.bubbles span:nth-child(10){ left:95%; animation-duration:19s;}
+
+h1 { margin-top: 20px; }
+
+/* 🎮 CONTROLS */
+.controls { margin: 10px; }
+
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* 🔥 BUTTON */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* 📊 INFO */
+.info {
+  display: flex;
+  gap: 20px;
+}
+
+/* 🎴 BOARD */
+.game-board {
+  display: grid;
+  gap: 12px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+/* 🃏 CARDS */
+.card {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 70%;
+  opacity: 0;
+}
+
+.flipped img {
+  opacity: 1;
+}
+
+.matched {
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* 🏆 POPUP */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
